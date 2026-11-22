@@ -1,0 +1,22 @@
+name = "planner-bot"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+preview_urls = false
+
+[observability]
+enabled = true
+
+[triggers]
+# Cron times are in UTC.
+#   "30 1 * * *"  = 01:30 UTC = 7:00 AM IST  (morning check-in)
+#   "30 16 * * *" = 16:30 UTC = 10:00 PM IST (night review)
+# If you change the morning cron, change MORNING_CRON below to the same string.
+crons = ["30 1 * * *", "30 16 * * *"]
+
+[vars]
+MORNING_CRON = "30 1 * * *"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "planner-db"
+database_id = "PASTE_DATABASE_ID_HERE"

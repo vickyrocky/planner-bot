@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.env.*
+
+# Local config with your own database ID (copy from wrangler.example.toml)
+wrangler.toml
